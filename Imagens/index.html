@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde Mental Simples</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!--================ MENU ================-->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>Saúde Mental</h2>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#inicio">Início</a></li>
+
+                <li><a href="#sobre">Sobre</a></li>
+
+                <li><a href="#dicas">Dicas</a></li>
+
+                <li><a href="#respiracao">Respiração</a></li>
+
+                <li><a href="#contato">Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!--================ BANNER ================-->
+
+    <section id="inicio" class="banner">
+
+        <div class="banner-texto">
+
+            <h1>Cuidar da mente também é cuidar da vida.</h1>
+
+            <p>
+
+                Pequenas atitudes podem transformar seu dia e melhorar
+                seu bem-estar emocional.
+
+            </p>
+
+            <a href="#sobre" class="btn">
+                Começar
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--================ SOBRE ================-->
+
+    <section id="sobre" class="sobre">
+
+        <div class="texto">
+
+            <h2>O que é Saúde Mental?</h2>
+
+            <p>
+
+                A saúde mental influencia nossos pensamentos,
+                emoções e comportamentos.
+
+                Cuidar da mente é tão importante quanto cuidar
+                do corpo.
+
+                Pequenas atitudes diárias ajudam a reduzir o estresse,
+                melhorar a autoestima e aumentar a qualidade de vida.
+
+            </p>
+
+        </div>
+
+        <div class="imagem">
+
+        </div>
+
+    </section>
+
+    <!--================ DICAS ================-->
+
+    <section id="dicas" class="dicas">
+
+        <h2>Dicas para cuidar da sua saúde mental</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-spa"></i>
+
+                <h3>Meditação</h3>
+
+                <p>Reserve alguns minutos do seu dia para respirar profundamente.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-moon"></i>
+
+                <h3>Dormir Bem</h3>
+
+                <p>Um sono de qualidade melhora o humor e a concentração.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-person-running"></i>
+
+                <h3>Exercícios</h3>
+
+                <p>Movimentar o corpo reduz o estresse e melhora o bem-estar.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-apple-whole"></i>
+
+                <h3>Alimentação</h3>
+
+                <p>Uma alimentação saudável ajuda também na saúde emocional.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Família</h3>
+
+                <p>Conversar fortalece os laços e reduz a ansiedade.</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-music"></i>
+
+                <h3>Música</h3>
+
+                <p>Ouvir músicas relaxantes ajuda a acalmar a mente.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--================ HUMOR ================-->
+
+    <section class="humor">
+
+        <h2>Como você está hoje?</h2>
+
+        <p>Escolha um emoji.</p>
+
+        <div class="emojis">
+
+            <button onclick="mostrarMensagem('feliz')">😊</button>
+
+            <button onclick="mostrarMensagem('normal')">😐</button>
+
+            <button onclick="mostrarMensagem('triste')">😔</button>
+
+        </div>
+
+        <div id="mensagemHumor"></div>
+
+    </section>
+
+    <!--================ RESPIRAÇÃO ================-->
+
+    <section id="respiracao" class="respiracao">
+
+        <h2>Respiração Guiada</h2>
+
+        <p>Respire lentamente seguindo o círculo.</p>
+
+        <div class="circulo"></div>
+
+        <button onclick="iniciarRespiracao()">
+
+            Iniciar
+
+        </button>
+
+    </section>
+
+    <!--================ FRASES ================-->
+
+    <section class="frases">
+
+        <h2>Frase Motivacional</h2>
+
+        <p id="frase">
+
+            Você é mais forte do que imagina.
+
+        </p>
+
+        <button onclick="novaFrase()">
+
+            Nova Frase
+
+        </button>
+
+    </section>
+
+    <!--================ VÍDEO ================-->
+
+    <section class="video">
+
+        <h2>Meditação Guiada</h2>
+
+        <iframe
+            width="700"
+            height="400"
+            src="https://www.youtube.com/embed/inpok4MKVLM"
+            title="Meditação"
+            allowfullscreen>
+        </iframe>
+
+    </section>
+
+    <!--================ FAQ ================-->
+
+    <section class="faq">
+
+        <h2>Perguntas Frequentes</h2>
+
+        <details>
+
+            <summary>O que é ansiedade?</summary>
+
+            <p>
+
+                Ansiedade é uma resposta natural do organismo diante
+                de situações de preocupação ou perigo.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>O que é estresse?</summary>
+
+            <p>
+
+                O estresse é uma reação física e emocional diante
+                de desafios e pressões.
+
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>Quando procurar ajuda?</summary>
+
+            <p>
+
+                Quando os sintomas persistirem e começarem
+                a interferir na sua rotina.
+
+            </p>
+
+        </details>
+
+    </section>
+
+    <!--================ CONTATO ================-->
+
+    <section id="contato" class="contato">
+
+        <h2>Entre em Contato</h2>
+
+        <form>
+
+            <input type="text" placeholder="Seu nome">
+
+            <input type="email" placeholder="Seu e-mail">
+
+            <textarea placeholder="Digite sua mensagem"></textarea>
+
+            <button>
+
+                Enviar
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!--================ RODAPÉ ================-->
+
+    <footer>
+
+        <h3>Saúde Mental Simples</h3>
+
+        <p>
+
+            Cuidar da mente também é um ato de amor.
+
+        </p>
+
+        <div class="redes">
+
+            <i class="fab fa-instagram"></i>
+
+            <i class="fab fa-facebook"></i>
+
+            <i class="fab fa-youtube"></i>
+
+            <i class="fab fa-whatsapp"></i>
+
+        </div>
+
+        <p>
+
+            © 2026 Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
